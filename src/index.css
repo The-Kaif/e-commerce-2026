@@ -552,7 +552,6 @@ CARD
 
 .card-actions {
   margin-top: 16px;
-  display: flex;
   gap: 10px;
 }
 
@@ -1105,6 +1104,9 @@ MOBILE
 /* =========================
 MOBILE BUTTON FIXES
 ========================= */
+/* =========================
+MOBILE BUTTON FIXES
+========================= */
 @media (max-width: 576px) {
   .primary-btn,
   .outline-btn,
@@ -1124,9 +1126,13 @@ MOBILE BUTTON FIXES
   }
 
   .card-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    width: 100%;
+  }
+
+  .card-actions .primary-btn {
+    width: 100%;
+    flex: 1;
   }
 
   .detail-actions {
