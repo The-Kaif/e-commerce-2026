@@ -1,73 +1,198 @@
-# React + TypeScript + Vite
+# 🛒 ShopKart — E-Commerce Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive e-commerce web application built using **React + TypeScript + Vite**.  
+Designed with a clean shopping experience, dynamic product filtering, cart management, and responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Project Overview
 
-## React Compiler
+ShopKart allows users to browse products, search and filter items, view product details, add products to cart, and manage cart items with persistent storage.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🛍️ Product Listing Page
+- Responsive product grid layout  
+- Product image, title, category, and price  
+- Skeleton loading while fetching data  
+- Empty state UI  
+- API error fallback with retry option  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🔎 Search / Filter / Sort
+- Search products by name  
+- Multi-category filtering  
+- Sort products by:
+  - Price Low to High  
+  - Price High to Low  
+  - Name A-Z  
+  - Name Z-A  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Filters saved in URL query params  
+- Refresh-safe filters  
+- Back / Forward browser navigation support  
+- Reset filters option  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📄 Product Detail Page
+- Dynamic routing using product ID  
+- Product image, title, description, category, price  
+- Add to cart button  
+- Continue shopping button  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🛒 Cart Functionality
+- Add items to cart  
+- Increase / decrease quantity  
+- Remove items  
+- Show total number of items  
+- Show subtotal & total price  
+- Checkout simulation with toast notification  
+- Empty cart UI  
+- Add more products button  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 💾 Persistent Storage
+- Cart stored in localStorage  
+- Cart remains after page refresh  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📱 Responsive Design
+- Mobile friendly  
+- Tablet support  
+- Desktop optimized  
+
+### 🧪 Automated Testing
+Playwright test cases included:
+
+- Homepage loads  
+- Add item to cart  
+- Cart page works  
+
+Tests passed on:
+
+- Chromium  
+- Firefox  
+- WebKit  
+
+---
+
+## 🛠 Tech Stack
+
+- React 19  
+- TypeScript  
+- Vite  
+- React Router DOM  
+- Context API  
+- Axios  
+- React Hot Toast  
+- React Icons  
+- Playwright  
+- CSS3  
+
+---
+
+## 🚀 Getting Started
+
+### Install Dependencies
+
+npm install
+
+### Run Development Server
+
+npm run dev
+
+### Open in Browser
+
+http://localhost:5173
+
+---
+
+## 📜 Available Scripts
+
+### Start Development Server
+
+npm run dev
+
+### Build for Production
+
+npm run build
+
+### Preview Production Build
+
+npm run preview
+
+### Run Lint
+
+npm run lint
+
+---
+
+## 🧪 Run Tests
+
+### Execute Playwright Tests
+
+npx playwright test
+
+### Open HTML Test Report
+
+npx playwright show-report
+
+---
+
+## 📂 Folder Structure
+
+src/  
+├── api/  
+│   └── productApi.ts  
+│  
+├── assets/  
+│  
+├── components/  
+│   ├── Footer.tsx  
+│   ├── Header.tsx  
+│   ├── Pagination.tsx  
+│   ├── ProductCard.tsx  
+│   └── SkeletonCard.tsx  
+│  
+├── context/  
+│   └── CartContext.tsx  
+│  
+├── pages/  
+│   ├── Home.tsx  
+│   ├── ProductDetail.tsx  
+│   └── Cart.tsx  
+│  
+├── types/  
+│   └── product.ts  
+│  
+├── utils/  
+│   └── storage.ts  
+│  
+├── App.tsx  
+├── main.tsx  
+└── index.css  
+
+---
+
+## 🎯 Key Highlights
+
+- Modern responsive UI  
+- Dynamic API based filtering  
+- URL query param state management  
+- Reusable component structure  
+- Cart persistence using localStorage  
+- Cross-browser Playwright testing  
+- Clean and scalable codebase  
+
+---
+
+## 📦 Build Project
+
+npm run build
+
+---
+
+## 🙌 Author
+
+**Mohd Kaif**  
+Frontend Developer (React / TypeScript)
+
+---
