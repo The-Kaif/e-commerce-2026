@@ -1146,3 +1146,45 @@ MOBILE BUTTON FIXES
     width: 100%;
   }
 }
+
+/* PRODUCT CARD BUTTON FIX */
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-link {
+  display: block;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  width: 100%;
+}
+
+.card-actions .primary-btn {
+  width: 100%;
+  flex: 1;
+}
+
+.primary-btn {
+  height: 46px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .card-actions .primary-btn {
+    height: 44px;
+    font-size: 15px;
+  }
+}
